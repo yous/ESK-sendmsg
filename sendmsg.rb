@@ -5,4 +5,4 @@ require 'mechanize'
 
 agent = Mechanize.new
 agent.basic_auth 'ermaker@gmail.com', '.'
-agent.post 'https://boxcar.io/notifications', 'notification[message'] => 'Finished'
+agent.post 'https://boxcar.io/notifications', 'notification[message'] => ARGV.join(' ')
